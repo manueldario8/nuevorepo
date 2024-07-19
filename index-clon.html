@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git: Desarrollo Colaborativo</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="#" class="logo">git</a>
+        <button class="btn">&equiv;</button>
+        <ul class="menu">
+          <li><a href="#" title="Inicio">Inicio</a></li>
+          <li><a href="about.html" title="Acerca">Acerca de nosotros</a></li>
+          <li><a href="gallery.html" title="Galeria">Galería</a></li>
+          <li><a href="#contacto" title="Contacto">Contáctanos</a></li>
+
+        </ul>
+      </nav>
+    </header>
+    <h1>Git: desarrollo colaborativo</h1>
+    <br>
+
+    <section>
+      <h2>Areas de GIT</h2>
+      <article>
+        <h3>Working directory</h3>
+        <p>El área de trabajo corresponde a la tarjeta donde inicializamos el repositorio de GIT. Donde rara vez a
+          estar utilizando la línea de comandos y es básicamente donde vamos a crear, editar y eliminar los
+          diferentes
+          archivos de nuestro proyecto</p>
+        <ul class="commands">
+          <li><b>Dir || Ls</b></li>
+          <p>Éstos comandos muestran el contenido de la carpeta actual</p>
+          <li><b>Cd y path</b></li>
+          <p>Este comando cambia la carpeta actual por la seleccionada, para ir para atrás es "cd .."</p>
+          <li><b>mkdir</b></li>
+          <p>"mkdir carpeta" crea una carpeta con el nombre especificado "carpeta"</p>
+          <li><b>git init</b></li>
+          <p>Inicializa un repositorio de git en la carpeta actual</p>
+          <li><b>rm -rf ó rm -r -f</b></li>
+          <p>Elimina de manera forzada un repositorio</p>
+        </ul>
+        <br>
+        <h3>Staging area (index)</h3>
+        <p>El area de control de cambios es aquella donde agregamos los archivos a los que vamos a estar haciéndole
+          seguimiento, cada vez que agregamos un elemento al INDEX, se realiza una captura de código (snapshot) que
+          luego deberá ser confirmada para determinar su permanencia en el historial de cambios</p>
+        <ul class="commands">
+          <li><b>git status</b></li>
+          <p>Muestra el estado de los archivos del working directory con respecto l index, dentro de los estados más
+            comunes están:</p>
+          <ul>
+            <li><b>untrack:</b>No se está haciendo seguimiento del archivo, irrecuperable en caso de pérdida</li>
+            <li><b>stage:</b>Se realizó la captura del código, pero todavía no se han confirmado los cambios</li>
+            <li><b>commited:</b>Los cambios fueron confirmados y se encuentran en el historial de versiones</li>
+            <li><b>modified:</b>El archivo difiere con respecto a lo registrado en el index o la última confirmación
+              (commit)</li>
+          </ul>
+
+          <li><b>git add &lt;file</b></li> pagrega al index el conjunto de archivos seleccionados
+          <li><b>git diff</b> compara los archivos del working directory con lo que está registrado en el index</li>
+          <li><b>git restore --staged &lt;file></b> elimina la última captura del index sin modificar el archivo
+          </li>
+          <li><b>git rm --cached</b> se elimina el archivo del index, no se realiza seguimiento</li>
+        </ul>
+      </article>
+      <br>
+      <br>
+      <article>
+        <h3>Repositository (local/remote)</h3>
+        <p>El es área donde se almacenan todas las configuraciones de cambios en archivos de tipo BLOB (binary large
+          object file) distribuídos en una estructura de carpetas identificadas de manera hexadecimal</p>
+        <ul class="commands">
+          <li><b>git commit:</b> abre el editor predeterminado para realizar la configuración de cambios</li>
+          <li><b>git log: </b>muestra le historial de cambios ordenados de manera descendente</li>
+          <li><b>git blame &lt;file>: </b>muestra los autores y confirmaciones de cada línea de archivo</li>
+          <li><b>git push &lt;remote> &lt;branch>: </b>agrega los cambios de la rama al repositorio remoto</li>
+          <li><b>git fetch &lt;remote>:</b>captura el historial de cambios de nuestro repositorio remoto</li>
+        </ul>
+      </article>
+    </section>
+    <section>
+      <h2>Apuntadores de GIT</h2>
+      <article>
+        <h3>HEAD</h3>
+        <p>Head es un apuntador movil que indica en qué punto del historial se encuentra, normalmente suele apuntar
+          a
+          la última confirmación que se ha hecho, pero, podemos utilizarlo para desplazarnos dentro del historial
+          del
+          cambios. También se utiliza como referente para otros comandos, como: checkout, diff, etc... si escribimos
+          <em>HEAD~n</em> ó <em>HEAD^^</em> estamos indiciando que queremos visualizar o comparar el commit que se
+          encuentra n veces lo indicado
+        </p>
+      </article>
+      <article>
+        <h3>BRANCH</h3>
+        <p>El branch es un apuntador dinámico que siempre se corresponde con el último commit de la historia. Se
+          utiliza para facilitar la navegación dentro del historial de confirmaciones, y, también para probar
+          características, corregir errores o realizar revisiones sin necesidad de afectar la historia principal</p>
+      </article>
+    </section>
+    <footer id="footer">
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2054888197904!2d-58.3972002!3d-34.598964999999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbb06302a60b%3A0xf0b8450fe80ccc1c!2sBagels%20%26%20Bagels%20Plaza%20Houssay!5e0!3m2!1ses!2sar!4v1720919043147!5m2!1ses!2sar"
+          loading="lazy">
+        </iframe>
+        <button class="btn icon-max"></button>
+      </div>
+      <div class="social">
+        <div class="social">
+          <a href="https://github.com/manueldario8/miprimeragith" target="_blank">GitHub</a>
+          <a href="https://gitlab.com/manueldario8/miprimeragith" target="_blank">GitLab</a>
+          <a href="https://bitbucket.org/manueldario8/miprimeragith" target="_blank">BitBucket</a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+
+</html>
