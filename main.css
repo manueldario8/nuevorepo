@@ -139,17 +139,30 @@ nav a {
   box-shadow: 0 0 .5rem #333;
 }
 
+/*Tabla de colaboradores*/
 
+.colabs {
+  margin: 1rem auto;
+  border-collapse: collapse;
+}
 
+.colabs caption,
+.colabs th,
+.colabs td {
+  border: .1rem solid #c3a;
+  padding: .5rem;
 
+}
 
+.colabs caption {
+  border-bottom: none;
+  border-radius: .60rem .60rem 0 0;
+}
 
-
-
-
-
-
-
+.colabs,
+.colabs caption {
+  background-color: #eee8;
+}
 
 
 
