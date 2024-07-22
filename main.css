@@ -139,10 +139,34 @@ nav a {
   box-shadow: 0 0 .5rem #333;
 }
 
+/*Tabla Colaboradores*/
+.colabs {
+  margin: 1rem auto;
+  background: linear-gradient(#c3a, #66c);
+  text-align: left;
+  border-collapse: collapse;
+}
 
+.colabs caption {
+  border-radius: .25rem .25rem 0 0;
+  background-color: #c3a;
+}
 
+.colabs caption,
+.colabs th,
+.colabs td {
+  padding: .25rem .5rem;
+  color: #eee;
+  text-shadow: 0 0 .5rem #333;
+}
 
+.colabs tbody tr:nth-child(odd) {
+  background-color: #6668;
+}
 
+.colabs tbody tr:nth-child(even) {
+  background-color: #9998;
+}
 
 
 
