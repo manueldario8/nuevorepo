@@ -17,5 +17,13 @@ function openMenu() {
 };
 
 /*Script del mapa */
+mapBtn.onclick = toggleMap;
 
-mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-max', 'icon-min') : mapBtn.classList.replace('icon-min', 'icon-max');
+function toggleMap() {
+  if (mapFrm.classList.toggle('active')) {
+    mapBtn.classList.replace('icon-max', 'icon-min')
+  } else {
+    mapBtn.classList.replace('icon-min', 'icon-max')
+  };
+
+}
