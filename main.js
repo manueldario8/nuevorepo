@@ -5,7 +5,16 @@ const menuList = document.querySelector('nav .menu');
 const mapBtn = document.querySelector('.map .btn');
 const mapFrm = document.querySelector('.map iframe');
 
-menuBtn.onclick = () => menuList.classList.toggle('active') ? menuBtn.innerHTML = '&times;' : menuBtn.innerHTML = '&equiv;';
+menuBtn.addEventListener('click', openMenu())
+
+
+function openMenu() {
+  if (menuList.classList.toggle('active')) {
+    menuBtn.innerHTML = '&times;'
+  } else {
+    menuBtn.innerHTML = '&equiv;'
+  }
+};
 
 /*Script del mapa */
 
